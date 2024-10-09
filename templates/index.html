@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>System Monitor</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>System Monitor</h1>
+        <div class="cpu-chart card">
+            <canvas id="cpuChart" width="800" height="400"></canvas>
+        </div>
+        <div class="grid">
+            <div class="card">
+                <canvas id="memoryChart" width="400" height="200"></canvas>
+            </div>
+            <div class="card">
+                <canvas id="networkChart" width="400" height="200"></canvas>
+            </div>
+            <div class="card">
+                <canvas id="diskChart" width="400" height="200"></canvas>
+            </div>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+</body>
+</html>
